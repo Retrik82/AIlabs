@@ -1,16 +1,12 @@
-# This is a sample Python script.
+from sklearn.model_selection import train_test_split
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+df = read
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+X = df.drop(['Weight'], axis=1)
+y = df['Weight']
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('сейчас окружение не ругается)))')
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+X_test, X_val, y_test, y_val = train_test_split(X_test, y_test, test_size=0.4, random_state=42)

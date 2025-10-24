@@ -102,3 +102,6 @@ plt.show()
 
 report = classification_report(y_test1, y_pred_test)
 print(report)
+
+
+#новый текст для реквеста

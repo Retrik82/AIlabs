@@ -25,3 +25,4 @@ df = pd.get_dummies(df, columns= ['region'])
 print(df.head())
 
 df.to_csv(r"C:\Users\Artsiom\PycharmProjects\AIlabs\data_all\processed_data.csv", index=False)
+

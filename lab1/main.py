@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 
-df = pd.read_csv("test.csv")
+df = pd.read_csv("data/test.csv")
 print('--------------------------------------------------------------------------')
 
 print(df.head(10))
@@ -67,6 +67,7 @@ df = pd.get_dummies(df, columns=columns_to_transform)
 
 print('---------------------------------------------------')
 print(df.head(10))
+df.info()
 
 df.to_csv("processed_test.csv", index=False)
 

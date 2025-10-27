@@ -6,6 +6,9 @@ from sklearn.preprocessing import MinMaxScaler
 df = pd.read_csv("data/test.csv")
 print('--------------------------------------------------------------------------')
 
+df = df.drop(['Name'], axis=1)
+
+
 print(df.head(10))
 print('--------------------------------------------------------------------------')
 df.info()
@@ -22,7 +25,7 @@ cryo_sleep_mod = df["CryoSleep"].mode()[0]
 cabin_mod = df["Cabin"].mode()[0]
 destination_mod = df["Destination"].mode()[0]
 vip_mod = df["VIP"].mode()[0]
-name_mod = df["Name"].mode()[0]
+#name_mod = df["Name"].mode()[0]
 
 age_med = df["Age"].median()
 room_service_med = df["RoomService"].median()
@@ -37,7 +40,7 @@ df["CryoSleep"] = df["CryoSleep"].fillna(cryo_sleep_mod)
 df["Cabin"] = df["Cabin"].fillna(cabin_mod)
 df["Destination"] = df["Destination"].fillna(destination_mod)
 df["VIP"] = df["VIP"].fillna(vip_mod)
-df["Name"] = df["Name"].fillna(name_mod)
+#df["Name"] = df["Name"].fillna(name_mod)
 
 df["Age"] = df["Age"].fillna(age_med)
 df["RoomService"] = df["RoomService"].fillna(room_service_med)
@@ -54,8 +57,9 @@ print(missing_values)
 print('---------------------------------------------------')
 scaler = MinMaxScaler()
 
-df["Age"] = scaler.fit_transform(df[["Age"]])
-df["RoomService"] = scaler.fit_transform(df[["RoomService"]])
+#df["Age"] = scaler.fit_transform(df[["Age"]])
+df["RoomService"] = scaler.fit_transform(
+df[["RoomService"]])
 df["FoodCourt"] = scaler.fit_transform(df[["FoodCourt"]])
 df["ShoppingMall"] = scaler.fit_transform(df[["ShoppingMall"]])
 df["Spa"] = scaler.fit_transform(df[["Spa"]])

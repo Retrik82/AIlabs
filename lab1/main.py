@@ -1,3 +1,4 @@
+
 import pandas as pd
 
 from sklearn.preprocessing import MinMaxScaler
@@ -77,4 +78,3 @@ df.info()
 
 
 df.to_csv("processed_test.csv", index=False)
-

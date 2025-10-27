@@ -58,8 +58,7 @@ print('---------------------------------------------------')
 scaler = MinMaxScaler()
 
 #df["Age"] = scaler.fit_transform(df[["Age"]])
-df["RoomService"] = scaler.fit_transform(
-df[["RoomService"]])
+df["RoomService"] = scaler.fit_transform(df[["RoomService"]])
 df["FoodCourt"] = scaler.fit_transform(df[["FoodCourt"]])
 df["ShoppingMall"] = scaler.fit_transform(df[["ShoppingMall"]])
 df["Spa"] = scaler.fit_transform(df[["Spa"]])
@@ -71,7 +70,11 @@ df = pd.get_dummies(df, columns=columns_to_transform)
 
 print('---------------------------------------------------')
 print(df.head(10))
+
+df = df.drop(['RoomService' ,'Cabin', 'CryoSleep'], axis=1)
 df.info()
+
+
 
 df.to_csv("processed_test.csv", index=False)
 

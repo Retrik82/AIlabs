@@ -22,6 +22,8 @@ print(is_missing)
 #Normalization will be different for different model
 
 df = pd.get_dummies(df, columns= ['region'])
+df = pd.get_dummies(df, columns= ['sex'])
+df['smoker'] = df['smoker'].map({'yes': True, 'no': False})
 print(df.head())
 
 df.to_csv(r"C:\Users\Artsiom\PycharmProjects\AIlabs\data_all\processed_data.csv", index=False)

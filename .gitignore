@@ -7,8 +7,6 @@ ENV/
 .vscode/
 *.swp
 *.swo
-
-.idea/
 *.iws
 *.iml
 *.ipr
@@ -35,3 +33,5 @@ Thumbs.db
 
 *.log
 logs/
+
+.ipynb_checkpoints/

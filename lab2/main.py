@@ -35,7 +35,7 @@ df["bmi"] = scaler.fit_transform(df[["bmi"]])
 
 df.head()
 
-df['charges']
+print(df['charges'])
 
 X = df.drop(['charges', 'id_number', 'children', 'sex_male', 'sex_female', 'region_northeast', 'region_northwest', 'region_southeast', 'region_southwest'], axis=1)
 y = df['charges']

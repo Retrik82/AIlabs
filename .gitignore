@@ -1,7 +1,15 @@
-# Virtual environments
 .venv/
 venv/
 env/
+ENV/
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iws
+*.iml
+*.ipr
 
 # Python cache
 __pycache__/
@@ -16,3 +24,7 @@ __pycache__/
 
 # OS
 .DS_Store
+*.log
+logs/
+
+.ipynb_checkpoints/

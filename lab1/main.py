@@ -16,12 +16,15 @@ print(is_missing)
 
 #If there were missing values, the mode, median, or mean could be filled in.
 #for example:
-#age_mean = df["Name"].mean()
+#age_mean = df["age"].mean()
 #df["age"] = df["age"].fillna(age_mean)
 
 #Normalization will be different for different model
 
 df = pd.get_dummies(df, columns= ['region'])
+df = pd.get_dummies(df, columns= ['sex'])
+df['smoker'] = df['smoker'].map({'yes': True, 'no': False})
 print(df.head())
 
 df.to_csv(r"C:\Users\Artsiom\PycharmProjects\AIlabs\data_all\processed_data.csv", index=False)
+

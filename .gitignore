@@ -11,26 +11,19 @@ ENV/
 *.iml
 *.ipr
 
+# Python cache
 __pycache__/
-*.py[cod]
 *.pyc
 
-build/
-dist/
-*.egg-info/
-
-.DS_Store
-Thumbs.db
-
-*.tmp
-*.temp
-.cache/
-
-.env
-.env.local
-
+# Jupyter
 .ipynb_checkpoints
 
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
 *.log
 logs/
 

@@ -23,7 +23,7 @@ print(is_missing)
 
 df = pd.get_dummies(df, columns= ['region'])
 df = pd.get_dummies(df, columns= ['sex'])
-df['smoker'] = df['smoker'].map({'yes': True, 'no': False})
+df['smoker'] = df['smoker'].map({'yes': 1, 'no': 0}).astype(int)
 print(df.head())
 
 df.to_csv(r"C:\Users\Artsiom\PycharmProjects\AIlabs\data_all\processed_data.csv", index=False)
